@@ -12,7 +12,6 @@ import InputForm from "@/components/form/InputForm";
 import SubmitButton from "@/components/form/SubmitButton";
 import axios from "axios";
 
-// axios.defaults.baseURL = 'http://localhost:8000/chat';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post['Access-Control-Allow-Methods'] = 'POST';
 axios.defaults.headers.post['Content-Type'] = 'application/json';

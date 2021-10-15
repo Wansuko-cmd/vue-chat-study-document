@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="message in messages" :key="message">
-      <MessageCard :text="message.text" :user-name="message.user_name"/>
+      <MessageCard :text="message.text" :user-name="message.user_name" v-on:click="onDelete(message.id)"/>
     </div>
   </div>
 </template>
@@ -24,5 +24,14 @@ export default {
           this.messages = response.data
         })
   },
+  methods: {
+    onDelete: function (id) {
+      axios.delete(`http://localhost:8000/chat/${id}`)
+      axios.get("http://localhost:8000/chat")
+          .then(response => {
+            this.messages = response.data
+          })
+    }
+  }
 }
 </script>
