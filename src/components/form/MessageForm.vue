@@ -1,7 +1,15 @@
 <template>
-  <div>
-    <InputForm :value="userName" :on-change="(newUserName) => this.userName = newUserName"/>
-    <InputForm :value="text" :on-change="(newText) => this.text = newText"/>
+  <div class="m-5">
+    <InputForm
+        :value="userName"
+        :on-change="(newUserName) => this.userName = newUserName"
+        label="ユーザー名"
+    />
+    <InputForm
+        :value="text"
+        :on-change="(newText) => this.text = newText"
+        label="テキスト"
+    />
 
     <SubmitButton :on-click="onSubmit" />
   </div>

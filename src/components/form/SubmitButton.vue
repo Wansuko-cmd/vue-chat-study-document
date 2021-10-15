@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button v-on:click="onClick"> 送信 </button>
+  <div class="m-5">
+    <button v-on:click="onClick" class="btn btn-primary"> 送信 </button>
   </div>
 </template>
 

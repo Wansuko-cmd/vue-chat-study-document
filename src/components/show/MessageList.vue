@@ -1,7 +1,10 @@
 <template>
   <div>
     <div v-for="message in messages" :key="message">
-      <MessageCard :text="message.text" :user-name="message.user_name" v-on:click="onDelete(message.id)"/>
+      <MessageCard
+          :text="message.text"
+          :user-name="message.user_name"
+          :on-delete-click="() => onDelete(message.id)"/>
     </div>
   </div>
 </template>
