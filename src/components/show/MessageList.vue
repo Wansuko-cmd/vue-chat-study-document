@@ -12,7 +12,7 @@ import axios from "axios";
 import MessageCard from "@/components/show/MessageCard";
 
 export default {
-  components: {MessageCard},
+  components: { MessageCard },
   data() {
     return {
       messages: []
